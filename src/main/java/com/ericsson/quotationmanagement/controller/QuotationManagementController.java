@@ -27,13 +27,9 @@ public class QuotationManagementController {
 	
 	@PostMapping("/record")
     public String record_quotation(@RequestBody Quotation payload) throws Exception {
-
-		Quotation quota = payload;
 		
-		quotationRepository.save(quota);
-		
-		System.out.println(quota.getId());
-		
+		quotationRepository.save(payload);
+				
 		return ("Quotation registered successfully");
         
     }
