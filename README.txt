@@ -1,4 +1,4 @@
-Service: http://localhost:8081/record
+Endpoint: http://localhost:8081/record
 
 Payload example:
 {
@@ -22,7 +22,7 @@ Payload example:
 }
 
 ---
-Service: http://localhost:8081/read
+Endpoint: http://localhost:8081/read
 
 Payload example:
 {
@@ -30,7 +30,7 @@ Payload example:
 }
 
 ---
-Service: http://localhost:8081/readAll
+Endpoint: http://localhost:8081/readAll
 
 Payload example:
 {
