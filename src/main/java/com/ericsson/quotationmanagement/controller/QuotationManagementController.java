@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ericsson.quotationmanagement.model.Quotation;
-import com.ericsson.quotationmanagement.model.Stock;
 import com.ericsson.quotationmanagement.repository.QuotationRepository;
-import com.ericsson.quotationmanagement.resources.ApiClient;
 import com.ericsson.quotationmanagement.resources.StockUtil;
 
 @RestController
@@ -24,13 +22,8 @@ public class QuotationManagementController {
 	@PostMapping("/create")
     public String record_quotation(@RequestBody Quotation payload) throws Exception {
 		
-		//Consumes the stock-manager API and returns registered stocks
-		ApiClient apiClient = new ApiClient();
-		Stock[] stock = ApiClient.consumeStock();
-		
 		//Validates if the stock to be registered exists in the stock-manager API
-		StockUtil stockUtil = new StockUtil();
-		if (!stockUtil.ExistsStock(stock, payload.getStockId())) {
+		if (!StockUtil.ExistsStock(payload.getStockId())) {
 			return ("This stock does not exist.");
 		}
 		

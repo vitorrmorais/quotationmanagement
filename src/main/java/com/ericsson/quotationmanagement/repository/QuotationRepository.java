@@ -9,5 +9,5 @@ import com.ericsson.quotationmanagement.model.Quotation;
 public interface QuotationRepository extends JpaRepository<Quotation, String> {
 	
 	List<Quotation> findByStockId(String stockId);
-
+	
 }

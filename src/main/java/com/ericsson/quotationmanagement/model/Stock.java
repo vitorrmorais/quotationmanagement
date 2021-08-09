@@ -25,5 +25,4 @@ public class Stock {
 		this.description = description;
 	}
 	
-	
 }
