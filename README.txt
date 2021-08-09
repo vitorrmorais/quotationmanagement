@@ -1,4 +1,4 @@
-Endpoint: http://localhost:8081/record
+Endpoint: http://localhost:8081/create
 
 Payload example:
 {
