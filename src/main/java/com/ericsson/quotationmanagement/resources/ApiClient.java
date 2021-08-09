@@ -1,7 +1,6 @@
 package com.ericsson.quotationmanagement.resources;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.client.RestTemplate;
 
 import com.ericsson.quotationmanagement.model.Stock;
