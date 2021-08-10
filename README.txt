@@ -1,3 +1,7 @@
+To run the docker container: 
+docker container run -p 8081:8081 -d vitorrmorais/quotationmanagement:0.0.1-SNAPSHOT
+
+--
 Endpoint: http://localhost:8081/create
 
 Payload example:

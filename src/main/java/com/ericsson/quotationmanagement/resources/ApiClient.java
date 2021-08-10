@@ -9,7 +9,7 @@ public class ApiClient {
 
 	public static Stock[] consumeStock() {
 
-		String url = "http://localhost:8080/stock";
+		String url = "http://kubernetes.docker.internal:8080/stock";
 
 		RestTemplate restTemplate = new RestTemplateBuilder()
 				.rootUri(url)
