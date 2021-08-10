@@ -7,10 +7,11 @@ public class StockUtil {
 	public static boolean ExistsStock(String pStock) {
 		
 		//Consumes the stock-manager API and returns registered stocks
-		Stock[] stock = ApiClient.consumeStock();
+		Stock[] stocks = ApiClient.consumeStock();
 		
-		for (Stock stockActual : stock) {
-			if (stockActual.getId().equals(pStock)) {
+		//Validates if the stock to be registered exists in the stock-manager
+		for (Stock stock : stocks) {
+			if (stock.getId().equals(pStock)) {
 				return true;
 			}
 		}
